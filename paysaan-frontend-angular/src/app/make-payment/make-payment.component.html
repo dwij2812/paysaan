@@ -1,0 +1,69 @@
+<div class="container" style="margin-top:2vh;">
+  <form [formGroup]="payment" (ngSubmit)="onSubmit()">
+    <mat-card class="mat-elevation-z2" style="border: thick black;margin: 2em;">
+      <mat-card-header style="justify-content: center">
+        <mat-card-title>Paysaan Payments</mat-card-title>
+      </mat-card-header>
+      <hr/>
+      <mat-card-content style="text-align: center;">
+
+        <div>
+          <mat-form-field style="width:45%" appearance="outline">
+            <mat-label>Your Mobile Number</mat-label>
+            <input matInput type="text" placeholder="Name" formControlName="senderMobileNumber" id="senderMobileNumber"
+                   required/>
+            <mat-error *ngIf="this.payment.get('senderMobileNumber').hasError('required')">Please Enter Your Mobile Number!
+            </mat-error>
+          </mat-form-field>
+          &nbsp;&nbsp;
+          <mat-form-field style="width: 45%" appearance="outline">
+            <mat-label>Receiver Mobile Number</mat-label>
+            <input matInput type="text" placeholder="Mobile Number" formControlName="receiverMobileNumber" id="receiverMobileNumber"
+                   required/>
+            <mat-error *ngIf="this.payment.get('receiverMobileNumber').hasError('required')">Please Enter Receiver Mobile Number !
+            </mat-error>
+            <mat-error *ngIf="this.payment.get('receiverMobileNumber').hasError('email')">Invalid Number !</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width:45%" appearance="outline">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" placeholder="Amount" formControlName="value" id="value"
+                   required/>
+            <mat-error *ngIf="this.payment.get('value').hasError('required')">Please Enter Amount to Pay !
+            </mat-error>
+          </mat-form-field>
+          &nbsp;&nbsp;
+          <mat-form-field style="width: 45%" appearance="outline">
+            <mat-label>Description</mat-label>
+            <mat-select style="text-align-last:center;" matInput type="text" placeholder="Description" formControlName="description" id="description" required>
+              <mat-option  value="Payments">Payments</mat-option>
+              <mat-option  value="Drought Insurance">Drought Insurance</mat-option>
+              <mat-option  value="Hurricane Insurance">Hurricane Insurance</mat-option>
+              <mat-option  value="Pest Insurance">Pest Insurance</mat-option>
+              <mat-option  value="Equipment Insurance">Equipment Insurance</mat-option>
+
+            </mat-select>
+            <mat-error *ngIf="this.payment.get('description').hasError('required')">Please Enter a Description !
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 92%" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Password" formControlName="password" id="password"
+                   required/>
+            <mat-error *ngIf="this.payment.get('password').hasError('required')">Please Enter a Password !
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div style="text-align: center;color: red;align-self: center;" *ngIf="error">{{error}}</div>
+      </mat-card-content>
+      <hr/>
+      <mat-card-actions style="text-align: center">
+        <button type="submit" class="btn btn-success">Pay</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

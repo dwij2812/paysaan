@@ -1,0 +1,30 @@
+<div class="container" style="margin-top:2vh;">
+      <mat-card class="mat-elevation-z2" style="border: thick black;margin: 2em;">
+        <mat-card-header style="justify-content: center">
+          <mat-card-title>Paysaan Transactions</mat-card-title>
+        </mat-card-header>
+        <hr/>
+        <mat-card-content style="text-align: center;">
+            <table class="table table-bordered" *ngIf="transaction">
+                <thead>
+                    <tr>
+                      <th>Sr.No</th>
+                      <th>Value</th>
+                      <th>Description</th>
+                      <th>Timestamp</th>
+                      <th>Block</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let block of transaction.chain;">
+                          <tr *ngFor="let trans of block.transactions;">
+                              <td>{{counter()}}</td>
+                              <td>{{trans.value}}</td>
+                              <td>{{trans.description}}</td>
+                              <td>{{block.timestamp | date}}</td>
+                              <td>{{block.block_number}}</td>
+                          </tr>
+                  </tbody>
+            </table>
+        </mat-card-content>
+      </mat-card>
+  </div>

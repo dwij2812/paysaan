@@ -1,0 +1,21 @@
+<mat-card  style="border: thick black;">
+  <mat-card-header style="justify-content: center">
+    <mat-card-title>Verify OTP</mat-card-title>
+  </mat-card-header>
+  <hr/>
+  <mat-card-content style="text-align: center;">
+
+    <div>
+      <mat-form-field style="width:95%" appearance="outline">
+        <mat-label>OTP</mat-label>
+        <input matInput [(ngModel)]="otp" placeholder="OTP" id="otp"
+               required/>
+      </mat-form-field>
+    </div>
+    <div style="text-align: center;color: red;align-self: center;" *ngIf="error">{{error}}</div>
+  </mat-card-content>
+  <hr/>
+  <mat-card-actions style="text-align: center">
+    <button (click)="onNoClick()" class="btn btn-success">Verify</button>
+  </mat-card-actions>
+</mat-card>

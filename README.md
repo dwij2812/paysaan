@@ -9,6 +9,16 @@ A Decentralized Payments and Microinsurance Transaction Management System for Fa
 - [Vimal Venugopal](https://github.com/thevimal98 "Vimal's GitHub Profile")
 - [Yash Jain](https://github.com/yashjainhsr "Yash's GitHub Profile")
 
+## Web Interface
+Try out Paysaan: https://paysaan.azurewebsites.net/
+
+## Android Application
+Do check out our Android application and paysaan (Pay-Asaan: Payments with Ease)
+[Paysaan Android Application](https://github.com/dwij2812/paysaan/raw/master/Paysaan-APK.apk "Link to Paysaan Android Application")
+
+## Demo Link
+Demo Video: https://youtu.be/ExCEUCgVMoo
+
 ## About Paysaan
 Agriculture is the most important sector of Indian Economy. Indian agriculture sector accounts for 18 per cent of India's gross domestic product (GDP) and provides employment to 50% of the countries workforce. Yet everyday we can see that the farmers are in various kinds of troubles and are facing a lot of issues economically as well as they are not able to tap the schemes or tech facilities available which can help solve a lot of issues.
 
@@ -35,11 +45,3 @@ Further the whole platform is decoupled and various developers can use the dev-f
         - App Service Plan
         - Azure Blockchain Service
         - Azure Database for MySQL
-
-
-## Web Interface
-Try out Paysaan: https://paysaan.azurewebsites.net/
-
-## Android Application
-Do check out our Android application and paysaan (Pay-Asaan: Payments with Ease)
-[Paysaan Android Application](https://github.com/dwij2812/paysaan/raw/master/Paysaan-APK.apk "Link to Paysaan Android Application")

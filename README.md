@@ -30,6 +30,12 @@ Further the whole platform is decoupled and various developers can use the dev-f
     - Twilio Messaging API
     - MySQL
     - Microsoft Azure
+        - Azure App Service
+        - Azure Web App
+        - App Service Plan
+        - Azure Blockchain Service
+        - Azure Database for MySQL
+
 
 ## Web Interface
 Try out Paysaan: https://paysaan.azurewebsites.net/
